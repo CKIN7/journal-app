@@ -2,15 +2,14 @@ import moment from 'moment';
 import { useDispatch } from 'react-redux';
 import { setActiveNote } from '../../slices/notesSlice';
 
-export const JournalEntry = ({ id, title, body, date, url }) => {
+export const JournalEntry = ({ id, body, title, date, url }) => {
     const noteDate = moment(date);
     const dispatch = useDispatch();
 
     const handleEntryClick = () => {
-        dispatch(setActiveNote({ id, title, body, date, url }));
+        dispatch(setActiveNote({ id, body, title, date, url }));
     };
 
-    //queda por mostrar la nueva entry en la pantalla al crearse
     return (
         <div
             className="journal__entry pointer animate__animated animate__fadeIn animate__faster"

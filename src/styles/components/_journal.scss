@@ -83,3 +83,55 @@
 .journal__entry-date-box span {
     font-size: 12px;
 }
+
+.search__bar {
+    width: 50%;
+    padding: 0px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    input[type='text'] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+
+            &:hover {
+                background-color: #f2f2f2;
+            }
+
+            &.selected {
+                background-color: #ccc;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 14px;
+        color: #666;
+    }
+}

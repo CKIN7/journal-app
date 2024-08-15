@@ -1,7 +1,6 @@
-
 .nothing__main-content {
     align-items: center;
-    background-color: $primary;
+    background-color: $dark-grey;
     color: white;
     display: flex;
     flex-direction: column;
@@ -10,6 +9,6 @@
 
     p {
         text-align: center;
+        font-size: 22px;
     }
 }
-

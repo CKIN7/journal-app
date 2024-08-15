@@ -3,6 +3,7 @@ import { NotesAppBar } from './NotesAppBar';
 import { useForm } from '../../hooks/useForm';
 import { useEffect, useRef } from 'react';
 import { setActiveNote, startDeleting } from '../../slices/notesSlice';
+import { SearchBar } from '../journal/SearchBar';
 
 export const NoteScreen = () => {
     const { active } = useSelector((state) => state.notes);
@@ -25,11 +26,11 @@ export const NoteScreen = () => {
 
     const handleDelete = () => {
         dispatch(startDeleting(active.id));
-        console.log(active.id);
     };
 
     return (
         <div className="notes__main-content">
+            <SearchBar />
             <NotesAppBar />
 
             <div className="notes__content">
@@ -61,7 +62,7 @@ export const NoteScreen = () => {
             </div>
 
             <button
-                className="btn btn-danger"
+                className="btn btn-delete"
                 onClick={handleDelete}>
                 Delete
             </button>

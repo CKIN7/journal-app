@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { JournalScreen } from '../components/journal/JournalScreen';
-import { AuthRouter } from './AuthRouter';
 import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase/firebase-config';
@@ -35,7 +34,7 @@ export const AppRouter = () => {
     }, [dispatch, setChecked, setIsLoggedIn]);
 
     if (checked) {
-        return <h1>Please wait...</h1>;
+        return;
     }
 
     return (

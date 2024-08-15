@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
 import { JournalEntry } from './JournalEntry';
-import { useEffect } from 'react';
 
 export const JournalEntries = () => {
     const { notes } = useSelector((state) => state.notes);

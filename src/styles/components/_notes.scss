@@ -4,16 +4,14 @@
     height: 100%;
 }
 
-
 .notes__appbar {
     align-items: center;
-    background-color: $primary;
+    background-color: $dark-grey;
     color: white;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px 10px 20px;
 }
-
 
 .notes__content {
     display: flex;
@@ -22,11 +20,11 @@
     padding: 20px;
 }
 
-
-.notes__title-input, .notes__textarea {
+.notes__title-input,
+.notes__textarea {
     border: none;
 
-    &:focus{
+    &:focus {
         outline: none;
     }
 }
