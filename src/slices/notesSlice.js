@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { db, dbe } from '../firebase/firebase-config';
+import { createSlice } from '@reduxjs/toolkit';
+import { dbe } from '../firebase/firebase-config';
 
 import {
     collection,
@@ -29,7 +29,6 @@ export const startNewNote = () => {
         newNote.id = noteId;
         dispatch(setActiveNote(newNote));
         dispatch(addNewNote(newNote));
-        console.log(noteId, newNote);
     };
 };
 
@@ -40,7 +39,6 @@ export const startSaveNote = (note) => {
 
         // Crea un objeto con solo los campos que deseas actualizar
 
-        console.log(note);
         const updates = {
             id: note.id,
             title: note.title,
@@ -52,7 +50,6 @@ export const startSaveNote = (note) => {
         if (!updates.url) {
             delete updates.url;
         }
-        console.log(updates);
 
         // Update the note in Firestore
         await updateDoc(noteRef, updates);
@@ -78,7 +75,6 @@ export const startUploading = (file) => {
         const updatedActive = {
             ...active,
             url: fileUrl,
-            // noteId: { ...active.noteId, url: fileUrl },
         };
 
         console.log(updatedActive.url);
@@ -98,7 +94,6 @@ export const startDeleting = (id) => {
 
         // Actualiza el estado de la aplicación
         dispatch(deleteNote(id));
-        console.log(id);
     };
 };
 
