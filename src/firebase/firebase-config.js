@@ -4,12 +4,12 @@ import { GoogleAuthProvider, getAuth } from 'firebase/auth';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-    apiKey: import.meta.env.VITE_API_KEY_FIREBASE,
+    apiKey: 'AIzaSyBgdE6t3trd_I5MU37TJ7tXCcdQeo30rvs',
     authDomain: 'react-app-cursos-7cd6e.firebaseapp.com',
     projectId: 'react-app-cursos-7cd6e',
     storageBucket: 'react-app-cursos-7cd6e.appspot.com',
     messagingSenderId: '173550720406',
-    appId: import.meta.env.VITE_API_ID_FIREBASE,
+    appId: '1:173550720406:web:11d2a87a4249ea4475b9b7',
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
